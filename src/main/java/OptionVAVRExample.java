@@ -2,13 +2,10 @@ import io.vavr.control.Option;
 
 public class OptionVAVRExample {
     public static void main(String[] args) {
-        String example = "Sraczka";
+        String example = "Word";
 
-        String orElse = Option.of(example)
-                .map("Bywa niebezpieczna "::concat)
+        String concat = Option.of(example)
+                .map("Added before word"::concat)
                 .getOrElse("c");
-
-        System.out.println(example);
-        System.out.println(orElse);
     }
 }
