@@ -1,5 +1,7 @@
 package graph;
 
+import graph.edge.Edge;
+import graph.vertex.Vertex;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GraphTest {
-
 
     private Graph graph;
 
@@ -21,18 +22,13 @@ class GraphTest {
     void removeVertex() {
         graph = new Graph(5);
         graph.removeVertex(2);
-        // TODO: 14/05/2023  
         assertEquals(3, graph.getNumberOfVertex());
     }
 
     @Test
-    void testRemoveVertex() {
-        // TODO: 14/05/2023  
-    }
-
-    @Test
     void addEdge() {
-        // TODO: 14/05/2023  
+       graph = new Graph();
+       graph.addEdge(new Edge(new Vertex(4), new Vertex(2), 43.2));
     }
 
     @Test
