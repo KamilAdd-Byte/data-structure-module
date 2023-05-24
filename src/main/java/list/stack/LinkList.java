@@ -1,4 +1,4 @@
-package list.queue;
+package list.stack;
 
 public class LinkList {
     private Link first;

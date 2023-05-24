@@ -1,5 +1,6 @@
-package list.queue;
+package list.stack;
 
+import list.stack.LinkStack;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

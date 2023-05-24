@@ -1,4 +1,4 @@
-package list.queue;
+package list.stack;
 
 public class LinkStack {
     private LinkList linkList;
@@ -34,7 +34,6 @@ public class LinkStack {
     public int size () {
         return linkList.getSize();
     }
-
 
     public void displayStack() {
         System.out.print("Stos szczyt ---> dno: ");
