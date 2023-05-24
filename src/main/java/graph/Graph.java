@@ -13,8 +13,10 @@ public class Graph {
     }
 
     /**
-     * Tworzy graf z n wierzcholkami
-     * @param n ilosc wierzcholkow do utworzenia
+     * Creates a graph with n vertices
+     * pl:"Tworzy graf z n wierzcholkami"
+     * @param n number of vertices to be created
+     * pl:"ilosc wierzcholkow do utworzenia"
      */
     public Graph(int n) {
         for (int i = 0; i < n; i++) {
@@ -23,7 +25,9 @@ public class Graph {
         this.vertexCount = n;
     }
 
-    // WIERZCHOŁKI
+    /**
+     * Add vertex to graph
+     */
     public void addVertex() {
         vertices.add(new Vertex(vertexCount));
         vertexCount++;
@@ -58,7 +62,9 @@ public class Graph {
         return this.vertexCount;
     }
 
-    //kopia!
+    /**
+     * @return copy of vertex
+     */
     public LinkedList<Vertex> getCopyVertex() {
         return new LinkedList<>(vertices);
     }

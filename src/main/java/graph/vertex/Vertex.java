@@ -2,12 +2,15 @@ package graph.vertex;
 
 import graph.edge.Edge;
 import io.vavr.control.Try;
+
+import java.text.MessageFormat;
 import java.util.LinkedList;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  * Representation vertex of the Graph
- * *wierzchołek
+ * "wierzchołek"
  */
 public class Vertex {
 
@@ -15,8 +18,7 @@ public class Vertex {
     private int number;//numer porzadkowy wierzcholka
     private final LinkedList<Edge> edges = new LinkedList<>();//lista krawędzi wychodzacych z wierzcholka
 
-    private Vertex() {
-    }
+    private Vertex() { }
 
     /**
      * @param number ordinal number of the vertex being created
@@ -34,15 +36,16 @@ public class Vertex {
     }
 
     /**
-     * Usuwa krawedzie biegnace do i-tego wierzcholka (jezeli istnieje)
-     *
-     * @param numberOfVertex numer wierzcholka do ktorego biegnie usuwana krawedz
+     * Removes edges running to the i-th vertex (if any)
+     * pl:"Usuwa krawedzie biegnace do i-tego wierzcholka (jezeli istnieje)"
+     * @param numberOfVertex number of the vertex to which the removed edge runs
+     * pl:"numer wierzcholka do ktorego biegnie usuwana krawedz"
      */
     public void removeEdge(int numberOfVertex) {
         int indexes = edges.size() - 1;
         while (indexes >= 0) {
             if (edges.get(numberOfVertex).getEnd().getNumber() == numberOfVertex) {
-                logger.info("index decreases:" + numberOfVertex);
+                logger.log(Level.INFO, MessageFormat.format("index decreases: {0} ", numberOfVertex));
                 indexes--;
             }
         }

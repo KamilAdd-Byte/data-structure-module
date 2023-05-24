@@ -1,12 +1,11 @@
 package graph.edge;
 
 import graph.vertex.Vertex;
-
 import java.util.UUID;
 
 /**
  * Representation edge of the Graph
- * *krawędź
+ * pl:"krawędź"
  */
 public class Edge {
 
