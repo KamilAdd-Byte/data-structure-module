@@ -65,7 +65,11 @@ public class DoublyLinkedList {
                 '}';
     }
 
-    public long getFirstItem() {
+    public long getDataForFirstLink() {
         return this.first.dData;
+    }
+
+    public Link getFirstLink() {
+        return this.first;
     }
 }

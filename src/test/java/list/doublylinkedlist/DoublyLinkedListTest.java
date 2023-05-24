@@ -2,6 +2,8 @@ package list.doublylinkedlist;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class DoublyLinkedListTest {
@@ -16,9 +18,9 @@ class DoublyLinkedListTest {
         doublyLinkedList.insertFirst(19L);
 
         doublyLinkedList.removeFirstLink();
-        assertEquals(143L, doublyLinkedList.getFirstItem());
+        assertEquals(143L, doublyLinkedList.getDataForFirstLink());
 
         doublyLinkedList.removeFirstLink();
-        assertEquals(14L, doublyLinkedList.getFirstItem());
+        assertEquals(14L, doublyLinkedList.getDataForFirstLink());
     }
 }
