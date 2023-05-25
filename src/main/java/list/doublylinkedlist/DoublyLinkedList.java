@@ -57,12 +57,25 @@ public class DoublyLinkedList {
         return temp;
     }
 
-    @Override
-    public String toString() {
-        return "DoublyLinkedList{" +
-                "first=" + first +
-                ", last=" + last +
-                '}';
+    public boolean insertAfter(long key, long data) {
+        Link current = first;
+        while (current.dData != key) {
+            current = current.next;
+            if (current == null)
+                return false;
+        }
+
+        Link newLink = new Link(data);
+        if (current == last) {
+            newLink.next = null;
+            last = newLink;
+        } else {
+            newLink.next = current.next;
+            current.next.previous = newLink;
+        }
+        newLink.previous = current;
+        current.next = newLink;
+        return true;
     }
 
     public long getDataForFirstLink() {
@@ -71,5 +84,13 @@ public class DoublyLinkedList {
 
     public Link getFirstLink() {
         return this.first;
+    }
+
+    @Override
+    public String toString() {
+        return "DoublyLinkedList{" +
+                "first=" + first +
+                ", last=" + last +
+                '}';
     }
 }
