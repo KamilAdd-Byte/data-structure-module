@@ -3,8 +3,10 @@ package list.twosided;
 import java.util.Date;
 
 /**
- *
- * Lista dwustronna daje dostęp do obu stron, lista dwukierunkowa pozwala poruszac sie w obu kierunkach
+ * A two-way list gives access to both sides, a double-way list allows you to move in both directions
+ * A two-way list does not have the ability to move 'against the flow'.
+ * pl: Lista dwustronna daje dostęp do obu stron, lista dwukierunkowa pozwala poruszac sie w obu kierunkach
+ *     Lista dwustronna nie ma możliwości poruszania się 'pod prąd'.
  */
 public class FirstLastList {
 
