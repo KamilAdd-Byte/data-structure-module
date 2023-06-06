@@ -68,4 +68,12 @@ public class Graph {
     public LinkedList<Vertex> getCopyVertex() {
         return new LinkedList<>(vertices);
     }
+
+    @Override
+    public String toString() {
+        return "Graph{" +
+                "vertices=" + vertices +
+                ", vertexCount=" + vertexCount +
+                '}';
+    }
 }
